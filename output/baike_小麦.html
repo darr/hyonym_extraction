@@ -1,0 +1,50 @@
+
+    <html>
+    <head>
+      <script type="text/javascript" src="VIS/dist/vis.js"></script>
+      <link href="VIS/dist/vis.css" rel="stylesheet" type="text/css">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+
+    <div id="VIS_draw"></div>
+    <script type="text/javascript">
+      var nodes = [{'label': '小麦属植物的统称', 'group': 'Event', 'id': 48}, {'label': '人物', 'group': 'Event', 'id': 53}, {'label': '娱乐人物', 'group': 'Event', 'id': 43}, {'label': '《巴啦啦小魔仙》中小蓝的守护精灵', 'group': 'Event', 'id': 52}, {'label': '演员', 'group': 'Event', 'id': 42}, {'label': 'Supreme舞蹈教室客座老师', 'group': 'Event', 'id': 60}, {'label': '老师', 'group': 'Event', 'id': 19}, {'label': '生物物种', 'group': 'Event', 'id': 49}, {'label': '女艺人', 'group': 'Event', 'id': 57}, {'label': '《神奇宝贝钻石与珍珠》的配角', 'group': 'Event', 'id': 41}, {'label': '中药', 'group': 'Event', 'id': 63}, {'label': '自然', 'group': 'Event', 'id': 31}, {'label': '香港TVB女艺人', 'group': 'Event', 'id': 56}, {'label': '配角', 'group': 'Event', 'id': 17}, {'label': '动漫《全职猎人》人物', 'group': 'Event', 'id': 59}, {'label': '游戏《PokeMon》人物', 'group': 'Event', 'id': 28}, {'label': '小麦', 'group': 'Event', 'id': 62}, {'label': '行业人物', 'group': 'Event', 'id': 61}, {'label': '电视剧《公主小妹》人物', 'group': 'Event', 'id': 51}, {'label': '植物', 'group': 'Event', 'id': 5}, {'label': '教师', 'group': 'Event', 'id': 39}, {'label': '精灵', 'group': 'Event', 'id': 15}, {'label': '游戏精灵宝可梦登场人物', 'group': 'Event', 'id': 55}, {'label': '非教师', 'group': 'Event', 'id': 38}];
+      var edges = [{'label': 'is-a', 'to': 53, 'from': 61}, {'label': 'is-a', 'to': 53, 'from': 43}, {'label': 'is-a', 'to': 5, 'from': 48}, {'label': 'is-a', 'to': 53, 'from': 51}, {'label': 'is-a', 'to': 53, 'from': 59}, {'label': 'is-a', 'to': 28, 'from': 62}, {'label': 'is-a', 'to': 52, 'from': 62}, {'label': 'is-a', 'to': 15, 'from': 52}, {'label': 'is-a', 'to': 17, 'from': 41}, {'label': 'is-a', 'to': 19, 'from': 60}, {'label': 'is-a', 'to': 53, 'from': 42}, {'label': 'is-a', 'to': 38, 'from': 60}, {'label': 'is-a', 'to': 42, 'from': 62}, {'label': 'is-a', 'to': 56, 'from': 62}, {'label': 'is-a', 'to': 53, 'from': 28}, {'label': 'is-a', 'to': 31, 'from': 48}, {'label': 'is-a', 'to': 39, 'from': 60}, {'label': 'is-a', 'to': 60, 'from': 62}, {'label': 'is-a', 'to': 53, 'from': 60}, {'label': 'is-a', 'to': 39, 'from': 38}, {'label': 'is-a', 'to': 41, 'from': 62}, {'label': 'is-a', 'to': 43, 'from': 42}, {'label': 'is-a', 'to': 48, 'from': 62}, {'label': 'is-a', 'to': 53, 'from': 55}, {'label': 'is-a', 'to': 49, 'from': 48}, {'label': 'is-a', 'to': 51, 'from': 62}, {'label': 'is-a', 'to': 53, 'from': 52}, {'label': 'is-a', 'to': 55, 'from': 62}, {'label': 'is-a', 'to': 57, 'from': 56}, {'label': 'is-a', 'to': 59, 'from': 62}, {'label': 'is-a', 'to': 61, 'from': 60}, {'label': 'is-a', 'to': 63, 'from': 62}];
+
+      var container = document.getElementById("VIS_draw");
+
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+
+      var options = {
+          nodes: {
+              shape: 'dot',
+              size: 25,
+              font: {
+                  size: 14
+              }
+          },
+          edges: {
+              font: {
+                  size: 14,
+                  align: 'left'
+              },
+              color: 'red',
+              arrows: {
+                  to: {enabled: true, scaleFactor: 0.5}
+              },
+              smooth: {enabled: true}
+          },
+          physics: {
+              enabled: true
+          }
+      };
+
+      var network = new vis.Network(container, data, options);
+
+    </script>
+    </body>
+    </html>

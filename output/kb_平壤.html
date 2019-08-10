@@ -1,0 +1,50 @@
+
+    <html>
+    <head>
+      <script type="text/javascript" src="VIS/dist/vis.js"></script>
+      <link href="VIS/dist/vis.css" rel="stylesheet" type="text/css">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+
+    <div id="VIS_draw"></div>
+    <script type="text/javascript">
+      var nodes = [{'group': 'Event', 'id': 36, 'label': '社会主义'}, {'group': 'Event', 'id': 12, 'label': '东亚'}, {'group': 'Event', 'id': 53, 'label': '大洲'}, {'group': 'Event', 'id': 51, 'label': '国家'}, {'group': 'Event', 'id': 14, 'label': '亚洲地理'}, {'group': 'Event', 'id': 39, 'label': '地理'}, {'group': 'Event', 'id': 40, 'label': '平壤'}, {'group': 'Event', 'id': 54, 'label': '亚洲国家'}, {'group': 'Event', 'id': 38, 'label': '各大洲地理'}, {'group': 'Event', 'id': 55, 'label': '亚洲'}, {'group': 'Event', 'id': 23, 'label': '地质学'}, {'group': 'Event', 'id': 17, 'label': '地球物理学'}, {'group': 'Event', 'id': 46, 'label': '政治思想'}, {'group': 'Event', 'id': 34, 'label': '远东'}, {'group': 'Event', 'id': 5, 'label': '地体动力学'}, {'group': 'Event', 'id': 48, 'label': '社会'}, {'group': 'Event', 'id': 49, 'label': 'root'}, {'group': 'Event', 'id': 47, 'label': '政治'}, {'group': 'Event', 'id': 41, 'label': '朝鲜'}, {'group': 'Event', 'id': 11, 'label': '自然地理'}, {'group': 'Event', 'id': 50, 'label': '社会主义国家'}, {'group': 'Event', 'id': 27, 'label': '板块'}];
+      var edges = [{'from': 14, 'label': 'is-a', 'to': 38}, {'from': 39, 'label': 'is-a', 'to': 49}, {'from': 27, 'label': 'is-a', 'to': 5}, {'from': 41, 'label': 'is-a', 'to': 12}, {'from': 50, 'label': 'is-a', 'to': 36}, {'from': 27, 'label': 'is-a', 'to': 11}, {'from': 12, 'label': 'is-a', 'to': 14}, {'from': 14, 'label': 'is-a', 'to': 55}, {'from': 27, 'label': 'is-a', 'to': 17}, {'from': 51, 'label': 'is-a', 'to': 39}, {'from': 41, 'label': 'is-a', 'to': 54}, {'from': 27, 'label': 'is-a', 'to': 23}, {'from': 41, 'label': 'is-a', 'to': 34}, {'from': 53, 'label': 'is-a', 'to': 27}, {'from': 41, 'label': 'is-a', 'to': 50}, {'from': 38, 'label': 'is-a', 'to': 53}, {'from': 47, 'label': 'is-a', 'to': 48}, {'from': 34, 'label': 'is-a', 'to': 55}, {'from': 36, 'label': 'is-a', 'to': 46}, {'from': 38, 'label': 'is-a', 'to': 39}, {'from': 40, 'label': 'is-a', 'to': 41}, {'from': 51, 'label': 'is-a', 'to': 47}, {'from': 54, 'label': 'is-a', 'to': 51}, {'from': 46, 'label': 'is-a', 'to': 47}, {'from': 48, 'label': 'is-a', 'to': 49}, {'from': 50, 'label': 'is-a', 'to': 51}, {'from': 55, 'label': 'is-a', 'to': 53}, {'from': 54, 'label': 'is-a', 'to': 55}];
+
+      var container = document.getElementById("VIS_draw");
+
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+
+      var options = {
+          nodes: {
+              shape: 'dot',
+              size: 25,
+              font: {
+                  size: 14
+              }
+          },
+          edges: {
+              font: {
+                  size: 14,
+                  align: 'left'
+              },
+              color: 'red',
+              arrows: {
+                  to: {enabled: true, scaleFactor: 0.5}
+              },
+              smooth: {enabled: true}
+          },
+          physics: {
+              enabled: true
+          }
+      };
+
+      var network = new vis.Network(container, data, options);
+
+    </script>
+    </body>
+    </html>

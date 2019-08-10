@@ -1,0 +1,50 @@
+
+    <html>
+    <head>
+      <script type="text/javascript" src="VIS/dist/vis.js"></script>
+      <link href="VIS/dist/vis.css" rel="stylesheet" type="text/css">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+
+    <div id="VIS_draw"></div>
+    <script type="text/javascript">
+      var nodes = [{'group': 'Event', 'id': 65, 'label': '各主题历史'}, {'group': 'Event', 'id': 7, 'label': '人文社科'}, {'group': 'Event', 'id': 82, 'label': '哲学流派'}, {'group': 'Event', 'id': 57, 'label': '文化人物'}, {'group': 'Event', 'id': 27, 'label': '文化'}, {'group': 'Event', 'id': 81, 'label': '专家'}, {'group': 'Event', 'id': 42, 'label': '儒家人物'}, {'group': 'Event', 'id': 24, 'label': '思维科学'}, {'group': 'Event', 'id': 79, 'label': '抽象'}, {'group': 'Event', 'id': 80, 'label': '各学科中国专家'}, {'group': 'Event', 'id': 60, 'label': '思想家'}, {'group': 'Event', 'id': 71, 'label': '思想'}, {'group': 'Event', 'id': 75, 'label': '专门史'}, {'group': 'Event', 'id': 67, 'label': '中国文化'}, {'group': 'Event', 'id': 54, 'label': '理论'}, {'group': 'Event', 'id': 70, 'label': '信仰'}, {'group': 'Event', 'id': 68, 'label': '儒家'}, {'group': 'Event', 'id': 73, 'label': '中国思想家'}, {'group': 'Event', 'id': 77, 'label': '学科'}, {'group': 'Event', 'id': 78, 'label': '哲学'}, {'group': 'Event', 'id': 66, 'label': '中国哲学'}, {'group': 'Event', 'id': 62, 'label': '各国哲学家'}, {'group': 'Event', 'id': 49, 'label': '哲学家'}, {'group': 'Event', 'id': 74, 'label': '思想史'}, {'group': 'Event', 'id': 72, 'label': '诸子百家'}, {'group': 'Event', 'id': 52, 'label': '中国哲学家'}, {'group': 'Event', 'id': 63, 'label': '按国家分类的各职业人物'}, {'group': 'Event', 'id': 47, 'label': '人文学科'}, {'group': 'Event', 'id': 83, 'label': '哲学理论'}, {'group': 'Event', 'id': 5, 'label': '学术'}, {'group': 'Event', 'id': 12, 'label': '孔子'}, {'group': 'Event', 'id': 15, 'label': '历史'}, {'group': 'Event', 'id': 59, 'label': '社会科学家'}, {'group': 'Event', 'id': 29, 'label': '中国人'}];
+      var edges = [{'from': 52, 'label': 'is-a', 'to': 66}, {'from': 83, 'label': 'is-a', 'to': 78}, {'from': 54, 'label': 'is-a', 'to': 5}, {'from': 78, 'label': 'is-a', 'to': 7}, {'from': 72, 'label': 'is-a', 'to': 74}, {'from': 73, 'label': 'is-a', 'to': 80}, {'from': 12, 'label': 'is-a', 'to': 42}, {'from': 75, 'label': 'is-a', 'to': 15}, {'from': 68, 'label': 'is-a', 'to': 70}, {'from': 65, 'label': 'is-a', 'to': 75}, {'from': 72, 'label': 'is-a', 'to': 83}, {'from': 71, 'label': 'is-a', 'to': 24}, {'from': 24, 'label': 'is-a', 'to': 83}, {'from': 78, 'label': 'is-a', 'to': 27}, {'from': 80, 'label': 'is-a', 'to': 29}, {'from': 83, 'label': 'is-a', 'to': 54}, {'from': 52, 'label': 'is-a', 'to': 62}, {'from': 60, 'label': 'is-a', 'to': 74}, {'from': 52, 'label': 'is-a', 'to': 73}, {'from': 74, 'label': 'is-a', 'to': 71}, {'from': 72, 'label': 'is-a', 'to': 52}, {'from': 42, 'label': 'is-a', 'to': 68}, {'from': 73, 'label': 'is-a', 'to': 60}, {'from': 78, 'label': 'is-a', 'to': 47}, {'from': 62, 'label': 'is-a', 'to': 49}, {'from': 68, 'label': 'is-a', 'to': 72}, {'from': 52, 'label': 'is-a', 'to': 80}, {'from': 54, 'label': 'is-a', 'to': 71}, {'from': 60, 'label': 'is-a', 'to': 57}, {'from': 60, 'label': 'is-a', 'to': 59}, {'from': 60, 'label': 'is-a', 'to': 71}, {'from': 62, 'label': 'is-a', 'to': 63}, {'from': 74, 'label': 'is-a', 'to': 65}, {'from': 66, 'label': 'is-a', 'to': 67}, {'from': 68, 'label': 'is-a', 'to': 82}, {'from': 70, 'label': 'is-a', 'to': 71}, {'from': 72, 'label': 'is-a', 'to': 73}, {'from': 74, 'label': 'is-a', 'to': 75}, {'from': 80, 'label': 'is-a', 'to': 77}, {'from': 78, 'label': 'is-a', 'to': 79}, {'from': 80, 'label': 'is-a', 'to': 81}, {'from': 82, 'label': 'is-a', 'to': 83}];
+
+      var container = document.getElementById("VIS_draw");
+
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+
+      var options = {
+          nodes: {
+              shape: 'dot',
+              size: 25,
+              font: {
+                  size: 14
+              }
+          },
+          edges: {
+              font: {
+                  size: 14,
+                  align: 'left'
+              },
+              color: 'red',
+              arrows: {
+                  to: {enabled: true, scaleFactor: 0.5}
+              },
+              smooth: {enabled: true}
+          },
+          physics: {
+              enabled: true
+          }
+      };
+
+      var network = new vis.Network(container, data, options);
+
+    </script>
+    </body>
+    </html>

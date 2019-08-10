@@ -1,0 +1,50 @@
+
+    <html>
+    <head>
+      <script type="text/javascript" src="VIS/dist/vis.js"></script>
+      <link href="VIS/dist/vis.css" rel="stylesheet" type="text/css">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+
+    <div id="VIS_draw"></div>
+    <script type="text/javascript">
+      var nodes = [{'id': 83, 'group': 'Event', 'label': '娱乐'}, {'id': 197, 'group': 'Event', 'label': '出版物'}, {'id': 154, 'group': 'Event', 'label': '卓依婷演唱歌曲'}, {'id': 57, 'group': 'Event', 'label': '周翼南所著书籍'}, {'id': 190, 'group': 'Event', 'label': '娱乐作品'}, {'id': 209, 'group': 'Event', 'label': '书'}, {'id': 117, 'group': 'Event', 'label': '单曲'}, {'id': 23, 'group': 'Event', 'label': '天体'}, {'id': 157, 'group': 'Event', 'label': '小城'}, {'id': 49, 'group': 'Event', 'label': '社会'}, {'id': 123, 'group': 'Event', 'label': '音乐作品'}, {'id': 211, 'group': 'Event', 'label': '歌曲'}, {'id': 169, 'group': 'Event', 'label': '非地理'}, {'id': 208, 'group': 'Event', 'label': '经管书籍'}, {'id': 132, 'group': 'Event', 'label': '高枫演唱歌曲'}, {'id': 182, 'group': 'Event', 'label': '梁海洋演唱歌曲'}, {'id': 165, 'group': 'Event', 'label': '音乐'}, {'id': 103, 'group': 'Event', 'label': '迈克尔·肯纳中国题材摄影集'}, {'id': 51, 'group': 'Event', 'label': '纪录片'}, {'id': 121, 'group': 'Event', 'label': '美费正清所著书籍'}, {'id': 201, 'group': 'Event', 'label': '郭峰创作歌曲'}, {'id': 164, 'group': 'Event', 'label': '流行音乐'}, {'id': 179, 'group': 'Event', 'label': '1972年安东尼奥尼执导纪录片'}, {'id': 107, 'group': 'Event', 'label': '行政区划'}, {'id': 73, 'group': 'Event', 'label': '古代史'}, {'id': 210, 'group': 'Event', 'label': '2018年华语群星演唱的歌曲'}, {'id': 137, 'group': 'Event', 'label': '民族'}, {'id': 167, 'group': 'Event', 'label': '小行星'}, {'id': 139, 'group': 'Event', 'label': '自然'}, {'id': 187, 'group': 'Event', 'label': '汉语词语'}, {'id': 162, 'group': 'Event', 'label': '中华人民共和国'}, {'id': 131, 'group': 'Event', 'label': '文化活动'}, {'id': 127, 'group': 'Event', 'label': '地点'}, {'id': 156, 'group': 'Event', 'label': '美国得州的小城'}, {'id': 41, 'group': 'Event', 'label': '摄影集'}, {'id': 199, 'group': 'Event', 'label': '日本地理区域概念'}, {'id': 205, 'group': 'Event', 'label': '地理'}, {'id': 163, 'group': 'Event', 'label': '政治'}, {'id': 146, 'group': 'Event', 'label': '朱新民专著'}, {'id': 53, 'group': 'Event', 'label': '国家名称'}, {'id': 196, 'group': 'Event', 'label': '丁玲创办的杂志'}, {'id': 193, 'group': 'Event', 'label': '腾格尔演唱歌曲'}, {'id': 181, 'group': 'Event', 'label': '郭光主编图书'}, {'id': 37, 'group': 'Event', 'label': '品种'}, {'id': 189, 'group': 'Event', 'label': '文化'}, {'id': 207, 'group': 'Event', 'label': '书籍'}, {'id': 177, 'group': 'Event', 'label': '社科书籍'}, {'id': 200, 'group': 'Event', 'label': '中国'}, {'id': 206, 'group': 'Event', 'label': '周明伟，郭长建，黄友义主编图书'}, {'id': 203, 'group': 'Event', 'label': '国家'}, {'id': 85, 'group': 'Event', 'label': '专著'}, {'id': 109, 'group': 'Event', 'label': '图书'}, {'id': 136, 'group': 'Event', 'label': '古代所指中原地区'}, {'id': 69, 'group': 'Event', 'label': '历史'}, {'id': 161, 'group': 'Event', 'label': '杂志'}, {'id': 125, 'group': 'Event', 'label': '作品'}, {'id': 149, 'group': 'Event', 'label': '官方'}, {'id': 92, 'group': 'Event', 'label': '成龙、吴京演唱歌曲'}, {'id': 33, 'group': 'Event', 'label': '中原地区'}, {'id': 145, 'group': 'Event', 'label': '文明古国'}, {'id': 129, 'group': 'Event', 'label': '概念'}, {'id': 204, 'group': 'Event', 'label': '世界四大文明古国之一'}, {'id': 176, 'group': 'Event', 'label': '外文出版社2014年版图书'}, {'id': 148, 'group': 'Event', 'label': '同名官方贴吧'}, {'id': 171, 'group': 'Event', 'label': '茄科枸杞属中国枸杞选育品种'}, {'id': 15, 'group': 'Event', 'label': '词语'}];
+      var edges = [{'to': 207, 'label': 'is-a', 'from': 177}, {'to': 189, 'label': 'is-a', 'from': 131}, {'to': 207, 'label': 'is-a', 'from': 208}, {'to': 209, 'label': 'is-a', 'from': 207}, {'to': 205, 'label': 'is-a', 'from': 169}, {'to': 209, 'label': 'is-a', 'from': 109}, {'to': 209, 'label': 'is-a', 'from': 177}, {'to': 15, 'label': 'is-a', 'from': 187}, {'to': 211, 'label': 'is-a', 'from': 193}, {'to': 203, 'label': 'is-a', 'from': 53}, {'to': 207, 'label': 'is-a', 'from': 181}, {'to': 23, 'label': 'is-a', 'from': 167}, {'to': 205, 'label': 'is-a', 'from': 199}, {'to': 125, 'label': 'is-a', 'from': 123}, {'to': 200, 'label': 'is-a', 'from': 103}, {'to': 207, 'label': 'is-a', 'from': 57}, {'to': 33, 'label': 'is-a', 'from': 136}, {'to': 182, 'label': 'is-a', 'from': 200}, {'to': 37, 'label': 'is-a', 'from': 171}, {'to': 109, 'label': 'is-a', 'from': 206}, {'to': 41, 'label': 'is-a', 'from': 103}, {'to': 165, 'label': 'is-a', 'from': 193}, {'to': 136, 'label': 'is-a', 'from': 200}, {'to': 197, 'label': 'is-a', 'from': 154}, {'to': 49, 'label': 'is-a', 'from': 162}, {'to': 51, 'label': 'is-a', 'from': 179}, {'to': 53, 'label': 'is-a', 'from': 204}, {'to': 83, 'label': 'is-a', 'from': 182}, {'to': 57, 'label': 'is-a', 'from': 200}, {'to': 164, 'label': 'is-a', 'from': 132}, {'to': 69, 'label': 'is-a', 'from': 204}, {'to': 197, 'label': 'is-a', 'from': 176}, {'to': 197, 'label': 'is-a', 'from': 206}, {'to': 211, 'label': 'is-a', 'from': 154}, {'to': 69, 'label': 'is-a', 'from': 136}, {'to': 189, 'label': 'is-a', 'from': 187}, {'to': 73, 'label': 'is-a', 'from': 136}, {'to': 92, 'label': 'is-a', 'from': 200}, {'to': 132, 'label': 'is-a', 'from': 200}, {'to': 207, 'label': 'is-a', 'from': 121}, {'to': 127, 'label': 'is-a', 'from': 136}, {'to': 83, 'label': 'is-a', 'from': 201}, {'to': 85, 'label': 'is-a', 'from': 146}, {'to': 156, 'label': 'is-a', 'from': 200}, {'to': 209, 'label': 'is-a', 'from': 176}, {'to': 148, 'label': 'is-a', 'from': 200}, {'to': 211, 'label': 'is-a', 'from': 92}, {'to': 205, 'label': 'is-a', 'from': 136}, {'to': 109, 'label': 'is-a', 'from': 103}, {'to': 165, 'label': 'is-a', 'from': 123}, {'to': 206, 'label': 'is-a', 'from': 200}, {'to': 103, 'label': 'is-a', 'from': 200}, {'to': 208, 'label': 'is-a', 'from': 206}, {'to': 107, 'label': 'is-a', 'from': 136}, {'to': 109, 'label': 'is-a', 'from': 181}, {'to': 207, 'label': 'is-a', 'from': 176}, {'to': 146, 'label': 'is-a', 'from': 200}, {'to': 177, 'label': 'is-a', 'from': 181}, {'to': 117, 'label': 'is-a', 'from': 132}, {'to': 162, 'label': 'is-a', 'from': 200}, {'to': 121, 'label': 'is-a', 'from': 200}, {'to': 123, 'label': 'is-a', 'from': 132}, {'to': 125, 'label': 'is-a', 'from': 190}, {'to': 127, 'label': 'is-a', 'from': 199}, {'to': 129, 'label': 'is-a', 'from': 199}, {'to': 131, 'label': 'is-a', 'from': 146}, {'to': 211, 'label': 'is-a', 'from': 132}, {'to': 204, 'label': 'is-a', 'from': 200}, {'to': 137, 'label': 'is-a', 'from': 136}, {'to': 139, 'label': 'is-a', 'from': 167}, {'to': 197, 'label': 'is-a', 'from': 181}, {'to': 176, 'label': 'is-a', 'from': 200}, {'to': 145, 'label': 'is-a', 'from': 204}, {'to': 189, 'label': 'is-a', 'from': 146}, {'to': 149, 'label': 'is-a', 'from': 148}, {'to': 196, 'label': 'is-a', 'from': 200}, {'to': 154, 'label': 'is-a', 'from': 200}, {'to': 189, 'label': 'is-a', 'from': 154}, {'to': 157, 'label': 'is-a', 'from': 156}, {'to': 189, 'label': 'is-a', 'from': 190}, {'to': 161, 'label': 'is-a', 'from': 196}, {'to': 163, 'label': 'is-a', 'from': 162}, {'to': 165, 'label': 'is-a', 'from': 164}, {'to': 167, 'label': 'is-a', 'from': 200}, {'to': 169, 'label': 'is-a', 'from': 199}, {'to': 171, 'label': 'is-a', 'from': 200}, {'to': 190, 'label': 'is-a', 'from': 200}, {'to': 203, 'label': 'is-a', 'from': 199}, {'to': 177, 'label': 'is-a', 'from': 176}, {'to': 179, 'label': 'is-a', 'from': 200}, {'to': 181, 'label': 'is-a', 'from': 200}, {'to': 211, 'label': 'is-a', 'from': 182}, {'to': 210, 'label': 'is-a', 'from': 200}, {'to': 187, 'label': 'is-a', 'from': 200}, {'to': 189, 'label': 'is-a', 'from': 196}, {'to': 197, 'label': 'is-a', 'from': 190}, {'to': 193, 'label': 'is-a', 'from': 200}, {'to': 211, 'label': 'is-a', 'from': 201}, {'to': 197, 'label': 'is-a', 'from': 196}, {'to': 199, 'label': 'is-a', 'from': 200}, {'to': 201, 'label': 'is-a', 'from': 200}, {'to': 203, 'label': 'is-a', 'from': 204}, {'to': 205, 'label': 'is-a', 'from': 204}, {'to': 207, 'label': 'is-a', 'from': 206}, {'to': 209, 'label': 'is-a', 'from': 208}, {'to': 211, 'label': 'is-a', 'from': 210}];
+
+      var container = document.getElementById("VIS_draw");
+
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+
+      var options = {
+          nodes: {
+              shape: 'dot',
+              size: 25,
+              font: {
+                  size: 14
+              }
+          },
+          edges: {
+              font: {
+                  size: 14,
+                  align: 'left'
+              },
+              color: 'red',
+              arrows: {
+                  to: {enabled: true, scaleFactor: 0.5}
+              },
+              smooth: {enabled: true}
+          },
+          physics: {
+              enabled: true
+          }
+      };
+
+      var network = new vis.Network(container, data, options);
+
+    </script>
+    </body>
+    </html>

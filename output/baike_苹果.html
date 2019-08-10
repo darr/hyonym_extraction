@@ -1,0 +1,50 @@
+
+    <html>
+    <head>
+      <script type="text/javascript" src="VIS/dist/vis.js"></script>
+      <link href="VIS/dist/vis.css" rel="stylesheet" type="text/css">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+
+    <div id="VIS_draw"></div>
+    <script type="text/javascript">
+      var nodes = [{'label': '动漫男子高中生的日常中角色', 'id': 135, 'group': 'Event'}, {'label': '韩国2008年康理贯执导电影', 'id': 115, 'group': 'Event'}, {'label': '音乐作品', 'id': 81, 'group': 'Event'}, {'label': '中药', 'id': 109, 'group': 'Event'}, {'label': '影视作品', 'id': 149, 'group': 'Event'}, {'label': '苹果属果实', 'id': 143, 'group': 'Event'}, {'label': '植物', 'id': 119, 'group': 'Event'}, {'label': '伊朗1998年莎米拉·玛克玛尔巴夫执导电影', 'id': 148, 'group': 'Event'}, {'label': '苹果公司', 'id': 74, 'group': 'Event'}, {'label': '谢和弦、E-SO演唱歌曲', 'id': 136, 'group': 'Event'}, {'label': '梦中人', 'id': 29, 'group': 'Event'}, {'label': '单曲', 'id': 79, 'group': 'Event'}, {'label': '娱乐作品', 'id': 91, 'group': 'Event'}, {'label': 'Minecraft中的食物类物品', 'id': 138, 'group': 'Event'}, {'label': '安与骑兵演唱歌曲', 'id': 98, 'group': 'Event'}, {'label': '电影作品', 'id': 127, 'group': 'Event'}, {'label': '公司', 'id': 17, 'group': 'Event'}, {'label': '歌曲', 'id': 137, 'group': 'Event'}, {'label': '剧情电影', 'id': 73, 'group': 'Event'}, {'label': '角色', 'id': 107, 'group': 'Event'}, {'label': '虚拟人物', 'id': 97, 'group': 'Event'}, {'label': '动漫形象', 'id': 145, 'group': 'Event'}, {'label': '蔷薇科苹果属果树', 'id': 118, 'group': 'Event'}, {'label': '邓丽欣演唱歌曲', 'id': 111, 'group': 'Event'}, {'label': '廖俊涛演唱歌曲', 'id': 124, 'group': 'Event'}, {'label': '网游《天堂梦》中人物', 'id': 147, 'group': 'Event'}, {'label': '木本植物', 'id': 31, 'group': 'Event'}, {'label': '韩国电影', 'id': 83, 'group': 'Event'}, {'label': '2008年康理贯导演韩国电影', 'id': 116, 'group': 'Event'}, {'label': '网游天堂梦中人物', 'id': 65, 'group': 'Event'}, {'label': '电影', 'id': 27, 'group': 'Event'}, {'label': '苹果产品公司', 'id': 123, 'group': 'Event'}, {'label': '生物物种', 'id': 129, 'group': 'Event'}, {'label': '蔷薇科苹果属果实', 'id': 49, 'group': 'Event'}, {'label': '人物', 'id': 133, 'group': 'Event'}, {'label': '民族音乐', 'id': 120, 'group': 'Event'}, {'label': '音乐', 'id': 121, 'group': 'Event'}, {'label': '品牌', 'id': 75, 'group': 'Event'}, {'label': '动漫《男子高中生的日常》中角色', 'id': 150, 'group': 'Event'}, {'label': '2007年李玉执导电影', 'id': 140, 'group': 'Event'}, {'label': '物品', 'id': 139, 'group': 'Event'}, {'label': '果树', 'id': 89, 'group': 'Event'}, {'label': '爱情电影', 'id': 141, 'group': 'Event'}, {'label': '苹果', 'id': 151, 'group': 'Event'}];
+      var edges = [{'from': 141, 'label': 'is-a', 'to': 27}, {'from': 73, 'label': 'is-a', 'to': 27}, {'from': 83, 'label': 'is-a', 'to': 27}, {'from': 97, 'label': 'is-a', 'to': 133}, {'from': 127, 'label': 'is-a', 'to': 27}, {'from': 74, 'label': 'is-a', 'to': 17}, {'from': 74, 'label': 'is-a', 'to': 151}, {'from': 147, 'label': 'is-a', 'to': 133}, {'from': 123, 'label': 'is-a', 'to': 17}, {'from': 116, 'label': 'is-a', 'to': 27}, {'from': 140, 'label': 'is-a', 'to': 27}, {'from': 31, 'label': 'is-a', 'to': 119}, {'from': 148, 'label': 'is-a', 'to': 27}, {'from': 115, 'label': 'is-a', 'to': 27}, {'from': 65, 'label': 'is-a', 'to': 29}, {'from': 143, 'label': 'is-a', 'to': 31}, {'from': 116, 'label': 'is-a', 'to': 83}, {'from': 151, 'label': 'is-a', 'to': 136}, {'from': 49, 'label': 'is-a', 'to': 151}, {'from': 111, 'label': 'is-a', 'to': 137}, {'from': 148, 'label': 'is-a', 'to': 141}, {'from': 150, 'label': 'is-a', 'to': 107}, {'from': 150, 'label': 'is-a', 'to': 133}, {'from': 116, 'label': 'is-a', 'to': 141}, {'from': 151, 'label': 'is-a', 'to': 49}, {'from': 98, 'label': 'is-a', 'to': 120}, {'from': 151, 'label': 'is-a', 'to': 138}, {'from': 151, 'label': 'is-a', 'to': 124}, {'from': 140, 'label': 'is-a', 'to': 91}, {'from': 81, 'label': 'is-a', 'to': 121}, {'from': 151, 'label': 'is-a', 'to': 116}, {'from': 115, 'label': 'is-a', 'to': 91}, {'from': 151, 'label': 'is-a', 'to': 65}, {'from': 151, 'label': 'is-a', 'to': 98}, {'from': 151, 'label': 'is-a', 'to': 74}, {'from': 116, 'label': 'is-a', 'to': 73}, {'from': 148, 'label': 'is-a', 'to': 73}, {'from': 74, 'label': 'is-a', 'to': 75}, {'from': 143, 'label': 'is-a', 'to': 119}, {'from': 98, 'label': 'is-a', 'to': 79}, {'from': 98, 'label': 'is-a', 'to': 81}, {'from': 148, 'label': 'is-a', 'to': 83}, {'from': 148, 'label': 'is-a', 'to': 91}, {'from': 133, 'label': 'is-a', 'to': 97}, {'from': 118, 'label': 'is-a', 'to': 89}, {'from': 98, 'label': 'is-a', 'to': 91}, {'from': 111, 'label': 'is-a', 'to': 121}, {'from': 143, 'label': 'is-a', 'to': 151}, {'from': 147, 'label': 'is-a', 'to': 97}, {'from': 98, 'label': 'is-a', 'to': 137}, {'from': 151, 'label': 'is-a', 'to': 150}, {'from': 151, 'label': 'is-a', 'to': 140}, {'from': 151, 'label': 'is-a', 'to': 133}, {'from': 135, 'label': 'is-a', 'to': 107}, {'from': 151, 'label': 'is-a', 'to': 109}, {'from': 151, 'label': 'is-a', 'to': 111}, {'from': 151, 'label': 'is-a', 'to': 118}, {'from': 151, 'label': 'is-a', 'to': 115}, {'from': 116, 'label': 'is-a', 'to': 149}, {'from': 118, 'label': 'is-a', 'to': 119}, {'from': 120, 'label': 'is-a', 'to': 121}, {'from': 151, 'label': 'is-a', 'to': 123}, {'from': 124, 'label': 'is-a', 'to': 137}, {'from': 140, 'label': 'is-a', 'to': 127}, {'from': 143, 'label': 'is-a', 'to': 129}, {'from': 151, 'label': 'is-a', 'to': 148}, {'from': 136, 'label': 'is-a', 'to': 133}, {'from': 151, 'label': 'is-a', 'to': 135}, {'from': 136, 'label': 'is-a', 'to': 137}, {'from': 138, 'label': 'is-a', 'to': 139}, {'from': 140, 'label': 'is-a', 'to': 141}, {'from': 151, 'label': 'is-a', 'to': 143}, {'from': 150, 'label': 'is-a', 'to': 145}, {'from': 151, 'label': 'is-a', 'to': 147}, {'from': 148, 'label': 'is-a', 'to': 149}, {'from': 150, 'label': 'is-a', 'to': 151}];
+
+      var container = document.getElementById("VIS_draw");
+
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+
+      var options = {
+          nodes: {
+              shape: 'dot',
+              size: 25,
+              font: {
+                  size: 14
+              }
+          },
+          edges: {
+              font: {
+                  size: 14,
+                  align: 'left'
+              },
+              color: 'red',
+              arrows: {
+                  to: {enabled: true, scaleFactor: 0.5}
+              },
+              smooth: {enabled: true}
+          },
+          physics: {
+              enabled: true
+          }
+      };
+
+      var network = new vis.Network(container, data, options);
+
+    </script>
+    </body>
+    </html>

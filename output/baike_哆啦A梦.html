@@ -1,0 +1,50 @@
+
+    <html>
+    <head>
+      <script type="text/javascript" src="VIS/dist/vis.js"></script>
+      <link href="VIS/dist/vis.css" rel="stylesheet" type="text/css">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+
+    <div id="VIS_draw"></div>
+    <script type="text/javascript">
+      var nodes = [{'id': 88, 'group': 'Event', 'label': '朝日电视台制作动画(《新哆啦A梦》)'}, {'id': 87, 'group': 'Event', 'label': '朝日电视台改编动画作品大山版'}, {'id': 51, 'group': 'Event', 'label': '版'}, {'id': 104, 'group': 'Event', 'label': '哆啦A梦'}, {'id': 123, 'group': 'Event', 'label': '动画'}, {'id': 118, 'group': 'Event', 'label': '真人版哆啦A梦'}, {'id': 115, 'group': 'Event', 'label': '虚拟人物'}, {'id': 49, 'group': 'Event', 'label': '百宝箱'}, {'id': 107, 'group': 'Event', 'label': '作品'}, {'id': 119, 'group': 'Event', 'label': '梦'}, {'id': 69, 'group': 'Event', 'label': '动漫'}, {'id': 99, 'group': 'Event', 'label': '漫画'}, {'id': 41, 'group': 'Event', 'label': '人物'}, {'id': 112, 'group': 'Event', 'label': '我的最爱'}, {'id': 121, 'group': 'Event', 'label': '手机游戏'}, {'id': 73, 'group': 'Event', 'label': '歌曲'}, {'id': 80, 'group': 'Event', 'label': '日本电视台哆啦A梦主题曲'}, {'id': 103, 'group': 'Event', 'label': '动漫形象'}, {'id': 113, 'group': 'Event', 'label': ''}, {'id': 13, 'group': 'Event', 'label': '音乐'}, {'id': 84, 'group': 'Event', 'label': '日本电视台《哆啦A梦》主题曲'}, {'id': 59, 'group': 'Event', 'label': '剧'}, {'id': 58, 'group': 'Event', 'label': '日本电视台改编的动画剧'}, {'id': 106, 'group': 'Event', 'label': '朝日电视台改编动画作品'}, {'id': 109, 'group': 'Event', 'label': '机器人'}, {'id': 81, 'group': 'Event', 'label': '主题曲'}, {'id': 120, 'group': 'Event', 'label': '《哆啦A梦》智能手机游戏'}, {'id': 75, 'group': 'Event', 'label': '星野源演唱歌曲'}, {'id': 116, 'group': 'Event', 'label': '更换声优后，朝日电视台制作的动画'}, {'id': 57, 'group': 'Event', 'label': '搜狗工具百宝箱'}, {'id': 70, 'group': 'Event', 'label': '哆啦A梦智能手机游戏'}, {'id': 111, 'group': 'Event', 'label': '漫画作品'}, {'id': 85, 'group': 'Event', 'label': '娱乐'}, {'id': 114, 'group': 'Event', 'label': '《哆啦A梦》中登场的猫型机器人'}, {'id': 110, 'group': 'Event', 'label': '藤子·F·不二雄著作的科幻喜剧漫画'}, {'id': 108, 'group': 'Event', 'label': '日本漫画哆啦A梦中登场的猫型机器人'}, {'id': 36, 'group': 'Event', 'label': '娱乐作品'}, {'id': 122, 'group': 'Event', 'label': '朝日电视台改编动画作品水田版'}, {'id': 100, 'group': 'Event', 'label': '日本漫画《哆啦A梦》中登场的猫型机器人'}];
+      var edges = [{'label': 'is-a', 'to': 85, 'from': 36}, {'label': 'is-a', 'to': 41, 'from': 115}, {'label': 'is-a', 'to': 69, 'from': 103}, {'label': 'is-a', 'to': 99, 'from': 111}, {'label': 'is-a', 'to': 99, 'from': 110}, {'label': 'is-a', 'to': 119, 'from': 104}, {'label': 'is-a', 'to': 13, 'from': 84}, {'label': 'is-a', 'to': 58, 'from': 104}, {'label': 'is-a', 'to': 85, 'from': 58}, {'label': 'is-a', 'to': 36, 'from': 110}, {'label': 'is-a', 'to': 119, 'from': 88}, {'label': 'is-a', 'to': 41, 'from': 114}, {'label': 'is-a', 'to': 80, 'from': 104}, {'label': 'is-a', 'to': 85, 'from': 118}, {'label': 'is-a', 'to': 100, 'from': 104}, {'label': 'is-a', 'to': 115, 'from': 100}, {'label': 'is-a', 'to': 103, 'from': 110}, {'label': 'is-a', 'to': 88, 'from': 104}, {'label': 'is-a', 'to': 107, 'from': 36}, {'label': 'is-a', 'to': 106, 'from': 104}, {'label': 'is-a', 'to': 41, 'from': 110}, {'label': 'is-a', 'to': 51, 'from': 122}, {'label': 'is-a', 'to': 123, 'from': 88}, {'label': 'is-a', 'to': 70, 'from': 104}, {'label': 'is-a', 'to': 49, 'from': 57}, {'label': 'is-a', 'to': 51, 'from': 87}, {'label': 'is-a', 'to': 84, 'from': 104}, {'label': 'is-a', 'to': 110, 'from': 104}, {'label': 'is-a', 'to': 57, 'from': 104}, {'label': 'is-a', 'to': 59, 'from': 58}, {'label': 'is-a', 'to': 81, 'from': 84}, {'label': 'is-a', 'to': 109, 'from': 114}, {'label': 'is-a', 'to': 108, 'from': 104}, {'label': 'is-a', 'to': 116, 'from': 104}, {'label': 'is-a', 'to': 69, 'from': 114}, {'label': 'is-a', 'to': 121, 'from': 70}, {'label': 'is-a', 'to': 73, 'from': 75}, {'label': 'is-a', 'to': 75, 'from': 104}, {'label': 'is-a', 'to': 112, 'from': 104}, {'label': 'is-a', 'to': 120, 'from': 104}, {'label': 'is-a', 'to': 81, 'from': 80}, {'label': 'is-a', 'to': 85, 'from': 87}, {'label': 'is-a', 'to': 85, 'from': 84}, {'label': 'is-a', 'to': 87, 'from': 104}, {'label': 'is-a', 'to': 104, 'from': 88}, {'label': 'is-a', 'to': 107, 'from': 111}, {'label': 'is-a', 'to': 118, 'from': 104}, {'label': 'is-a', 'to': 122, 'from': 104}, {'label': 'is-a', 'to': 103, 'from': 100}, {'label': 'is-a', 'to': 99, 'from': 114}, {'label': 'is-a', 'to': 109, 'from': 100}, {'label': 'is-a', 'to': 103, 'from': 114}, {'label': 'is-a', 'to': 114, 'from': 104}, {'label': 'is-a', 'to': 107, 'from': 106}, {'label': 'is-a', 'to': 109, 'from': 108}, {'label': 'is-a', 'to': 111, 'from': 110}, {'label': 'is-a', 'to': 113, 'from': 112}, {'label': 'is-a', 'to': 115, 'from': 114}, {'label': 'is-a', 'to': 123, 'from': 116}, {'label': 'is-a', 'to': 119, 'from': 118}, {'label': 'is-a', 'to': 121, 'from': 120}, {'label': 'is-a', 'to': 123, 'from': 122}];
+
+      var container = document.getElementById("VIS_draw");
+
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+
+      var options = {
+          nodes: {
+              shape: 'dot',
+              size: 25,
+              font: {
+                  size: 14
+              }
+          },
+          edges: {
+              font: {
+                  size: 14,
+                  align: 'left'
+              },
+              color: 'red',
+              arrows: {
+                  to: {enabled: true, scaleFactor: 0.5}
+              },
+              smooth: {enabled: true}
+          },
+          physics: {
+              enabled: true
+          }
+      };
+
+      var network = new vis.Network(container, data, options);
+
+    </script>
+    </body>
+    </html>

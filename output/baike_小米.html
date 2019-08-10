@@ -1,0 +1,50 @@
+
+    <html>
+    <head>
+      <script type="text/javascript" src="VIS/dist/vis.js"></script>
+      <link href="VIS/dist/vis.css" rel="stylesheet" type="text/css">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+
+    <div id="VIS_draw"></div>
+    <script type="text/javascript">
+      var nodes = [{'id': 157, 'group': 'Event', 'label': '犬'}, {'id': 195, 'group': 'Event', 'label': '电视剧《神犬奇兵》军犬'}, {'id': 109, 'group': 'Event', 'label': '动物'}, {'id': 156, 'group': 'Event', 'label': '神犬小七中的拉布拉多犬'}, {'id': 139, 'group': 'Event', 'label': '公司'}, {'id': 59, 'group': 'Event', 'label': '化妆师'}, {'id': 186, 'group': 'Event', 'label': '小米公司'}, {'id': 108, 'group': 'Event', 'label': '中国3D动画侠岚系列中的雄性动物'}, {'id': 199, 'group': 'Event', 'label': '动画《赛尔号》中的精灵'}, {'id': 104, 'group': 'Event', 'label': '电影形象'}, {'id': 187, 'group': 'Event', 'label': '机构组织'}, {'id': 169, 'group': 'Event', 'label': '军犬'}, {'id': 101, 'group': 'Event', 'label': '农学名词'}, {'id': 119, 'group': 'Event', 'label': '草本'}, {'id': 181, 'group': 'Event', 'label': '汕尾市特色小吃'}, {'id': 189, 'group': 'Event', 'label': '人物'}, {'id': 167, 'group': 'Event', 'label': '农作物'}, {'id': 177, 'group': 'Event', 'label': '电影美食总动员中角色'}, {'id': 188, 'group': 'Event', 'label': '电视剧武林外传中人物'}, {'id': 201, 'group': 'Event', 'label': '手机品牌'}, {'id': 79, 'group': 'Event', 'label': '电视剧《武林外传》中人物'}, {'id': 178, 'group': 'Event', 'label': '我的狐仙老婆中人物'}, {'id': 165, 'group': 'Event', 'label': '企业'}, {'id': 75, 'group': 'Event', 'label': '互联网'}, {'id': 200, 'group': 'Event', 'label': '小米'}, {'id': 174, 'group': 'Event', 'label': '电影《美食总动员》中角色'}, {'id': 136, 'group': 'Event', 'label': '电视剧桃花小妹中人物'}, {'id': 69, 'group': 'Event', 'label': '自然'}, {'id': 171, 'group': 'Event', 'label': '主角'}, {'id': 127, 'group': 'Event', 'label': '动画片神奇阿呦主角之一'}, {'id': 191, 'group': 'Event', 'label': '中国3D动画《侠岚》系列中的雄性动物'}, {'id': 161, 'group': 'Event', 'label': '虚拟人物'}, {'id': 33, 'group': 'Event', 'label': '电视剧《公主小妹》中人物'}, {'id': 170, 'group': 'Event', 'label': '动画片《神奇阿呦》主角之一'}, {'id': 168, 'group': 'Event', 'label': '电视剧神犬奇兵军犬'}, {'id': 45, 'group': 'Event', 'label': '纹眉专家'}, {'id': 93, 'group': 'Event', 'label': '精灵'}, {'id': 77, 'group': 'Event', 'label': '动画野生动物宝宝角色'}, {'id': 125, 'group': 'Event', 'label': '电视剧形象'}, {'id': 71, 'group': 'Event', 'label': '科学百科农业科学分类'}, {'id': 91, 'group': 'Event', 'label': '游戏'}, {'id': 106, 'group': 'Event', 'label': '电视剧公主小妹中人物'}, {'id': 121, 'group': 'Event', 'label': '品牌'}, {'id': 115, 'group': 'Event', 'label': '中国食品科学技术学会'}, {'id': 143, 'group': 'Event', 'label': '禾本科狗尾草属一年生草本'}, {'id': 159, 'group': 'Event', 'label': '《为美好的世界献上祝福！》里的角色'}, {'id': 145, 'group': 'Event', 'label': '特色小吃'}, {'id': 49, 'group': 'Event', 'label': '生物物种'}, {'id': 25, 'group': 'Event', 'label': '动画'}, {'id': 95, 'group': 'Event', 'label': '娱乐'}, {'id': 55, 'group': 'Event', 'label': '动画赛尔号中的精灵'}, {'id': 183, 'group': 'Event', 'label': '动画《野生动物宝宝》角色'}, {'id': 129, 'group': 'Event', 'label': '苏州纹眉专家苏州著名化妆师'}, {'id': 197, 'group': 'Event', 'label': '为美好的世界献上祝福！里的角色'}, {'id': 163, 'group': 'Event', 'label': '角色'}, {'id': 173, 'group': 'Event', 'label': '周刊神奇宝贝放送局小刚的母亲'}, {'id': 39, 'group': 'Event', 'label': '娱乐作品'}, {'id': 74, 'group': 'Event', 'label': '移动互联网公司'}, {'id': 175, 'group': 'Event', 'label': '电影'}, {'id': 153, 'group': 'Event', 'label': '卡通人物'}, {'id': 85, 'group': 'Event', 'label': '母亲'}, {'id': 185, 'group': 'Event', 'label': '《武林外传》人物'}, {'id': 193, 'group': 'Event', 'label': '《神犬小七》中的拉布拉多犬'}, {'id': 133, 'group': 'Event', 'label': '生物'}, {'id': 152, 'group': 'Event', 'label': '《布奇乐乐园》卡通人物'}, {'id': 103, 'group': 'Event', 'label': '经济'}, {'id': 35, 'group': 'Event', 'label': '生活'}, {'id': 124, 'group': 'Event', 'label': '电视剧《桃花小妹》中人物'}];
+      var edges = [{'to': 189, 'from': 161, 'label': 'is-a'}, {'to': 189, 'from': 153, 'label': 'is-a'}, {'to': 157, 'from': 169, 'label': 'is-a'}, {'to': 189, 'from': 79, 'label': 'is-a'}, {'to': 139, 'from': 186, 'label': 'is-a'}, {'to': 133, 'from': 49, 'label': 'is-a'}, {'to': 95, 'from': 39, 'label': 'is-a'}, {'to': 139, 'from': 74, 'label': 'is-a'}, {'to': 189, 'from': 33, 'label': 'is-a'}, {'to': 189, 'from': 124, 'label': 'is-a'}, {'to': 189, 'from': 173, 'label': 'is-a'}, {'to': 95, 'from': 170, 'label': 'is-a'}, {'to': 25, 'from': 199, 'label': 'is-a'}, {'to': 49, 'from': 195, 'label': 'is-a'}, {'to': 163, 'from': 77, 'label': 'is-a'}, {'to': 108, 'from': 200, 'label': 'is-a'}, {'to': 33, 'from': 200, 'label': 'is-a'}, {'to': 35, 'from': 181, 'label': 'is-a'}, {'to': 186, 'from': 200, 'label': 'is-a'}, {'to': 39, 'from': 193, 'label': 'is-a'}, {'to': 121, 'from': 186, 'label': 'is-a'}, {'to': 69, 'from': 195, 'label': 'is-a'}, {'to': 45, 'from': 129, 'label': 'is-a'}, {'to': 93, 'from': 55, 'label': 'is-a'}, {'to': 49, 'from': 143, 'label': 'is-a'}, {'to': 74, 'from': 200, 'label': 'is-a'}, {'to': 104, 'from': 174, 'label': 'is-a'}, {'to': 55, 'from': 200, 'label': 'is-a'}, {'to': 124, 'from': 200, 'label': 'is-a'}, {'to': 59, 'from': 129, 'label': 'is-a'}, {'to': 174, 'from': 200, 'label': 'is-a'}, {'to': 125, 'from': 79, 'label': 'is-a'}, {'to': 163, 'from': 197, 'label': 'is-a'}, {'to': 109, 'from': 191, 'label': 'is-a'}, {'to': 69, 'from': 167, 'label': 'is-a'}, {'to': 71, 'from': 143, 'label': 'is-a'}, {'to': 189, 'from': 185, 'label': 'is-a'}, {'to': 75, 'from': 74, 'label': 'is-a'}, {'to': 77, 'from': 200, 'label': 'is-a'}, {'to': 79, 'from': 200, 'label': 'is-a'}, {'to': 163, 'from': 159, 'label': 'is-a'}, {'to': 189, 'from': 159, 'label': 'is-a'}, {'to': 85, 'from': 173, 'label': 'is-a'}, {'to': 178, 'from': 200, 'label': 'is-a'}, {'to': 106, 'from': 200, 'label': 'is-a'}, {'to': 91, 'from': 199, 'label': 'is-a'}, {'to': 93, 'from': 199, 'label': 'is-a'}, {'to': 95, 'from': 193, 'label': 'is-a'}, {'to': 171, 'from': 127, 'label': 'is-a'}, {'to': 169, 'from': 195, 'label': 'is-a'}, {'to': 101, 'from': 167, 'label': 'is-a'}, {'to': 103, 'from': 186, 'label': 'is-a'}, {'to': 175, 'from': 104, 'label': 'is-a'}, {'to': 189, 'from': 106, 'label': 'is-a'}, {'to': 109, 'from': 108, 'label': 'is-a'}, {'to': 136, 'from': 200, 'label': 'is-a'}, {'to': 163, 'from': 174, 'label': 'is-a'}, {'to': 115, 'from': 143, 'label': 'is-a'}, {'to': 200, 'from': 124, 'label': 'is-a'}, {'to': 119, 'from': 143, 'label': 'is-a'}, {'to': 121, 'from': 201, 'label': 'is-a'}, {'to': 168, 'from': 200, 'label': 'is-a'}, {'to': 125, 'from': 124, 'label': 'is-a'}, {'to': 127, 'from': 200, 'label': 'is-a'}, {'to': 129, 'from': 200, 'label': 'is-a'}, {'to': 189, 'from': 174, 'label': 'is-a'}, {'to': 133, 'from': 167, 'label': 'is-a'}, {'to': 170, 'from': 200, 'label': 'is-a'}, {'to': 189, 'from': 136, 'label': 'is-a'}, {'to': 139, 'from': 201, 'label': 'is-a'}, {'to': 163, 'from': 177, 'label': 'is-a'}, {'to': 143, 'from': 200, 'label': 'is-a'}, {'to': 145, 'from': 181, 'label': 'is-a'}, {'to': 157, 'from': 193, 'label': 'is-a'}, {'to': 156, 'from': 200, 'label': 'is-a'}, {'to': 152, 'from': 200, 'label': 'is-a'}, {'to': 153, 'from': 152, 'label': 'is-a'}, {'to': 188, 'from': 200, 'label': 'is-a'}, {'to': 157, 'from': 156, 'label': 'is-a'}, {'to': 159, 'from': 200, 'label': 'is-a'}, {'to': 161, 'from': 173, 'label': 'is-a'}, {'to': 163, 'from': 183, 'label': 'is-a'}, {'to': 165, 'from': 186, 'label': 'is-a'}, {'to': 167, 'from': 200, 'label': 'is-a'}, {'to': 169, 'from': 168, 'label': 'is-a'}, {'to': 171, 'from': 170, 'label': 'is-a'}, {'to': 173, 'from': 200, 'label': 'is-a'}, {'to': 175, 'from': 174, 'label': 'is-a'}, {'to': 177, 'from': 200, 'label': 'is-a'}, {'to': 189, 'from': 178, 'label': 'is-a'}, {'to': 181, 'from': 200, 'label': 'is-a'}, {'to': 183, 'from': 200, 'label': 'is-a'}, {'to': 185, 'from': 200, 'label': 'is-a'}, {'to': 187, 'from': 186, 'label': 'is-a'}, {'to': 189, 'from': 188, 'label': 'is-a'}, {'to': 191, 'from': 200, 'label': 'is-a'}, {'to': 193, 'from': 200, 'label': 'is-a'}, {'to': 195, 'from': 200, 'label': 'is-a'}, {'to': 197, 'from': 200, 'label': 'is-a'}, {'to': 199, 'from': 200, 'label': 'is-a'}, {'to': 201, 'from': 200, 'label': 'is-a'}];
+
+      var container = document.getElementById("VIS_draw");
+
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+
+      var options = {
+          nodes: {
+              shape: 'dot',
+              size: 25,
+              font: {
+                  size: 14
+              }
+          },
+          edges: {
+              font: {
+                  size: 14,
+                  align: 'left'
+              },
+              color: 'red',
+              arrows: {
+                  to: {enabled: true, scaleFactor: 0.5}
+              },
+              smooth: {enabled: true}
+          },
+          physics: {
+              enabled: true
+          }
+      };
+
+      var network = new vis.Network(container, data, options);
+
+    </script>
+    </body>
+    </html>

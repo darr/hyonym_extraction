@@ -1,0 +1,50 @@
+
+    <html>
+    <head>
+      <script type="text/javascript" src="VIS/dist/vis.js"></script>
+      <link href="VIS/dist/vis.css" rel="stylesheet" type="text/css">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+
+    <div id="VIS_draw"></div>
+    <script type="text/javascript">
+      var nodes = [{'label': '历史人物', 'group': 'Event', 'id': 59}, {'label': '历史', 'group': 'Event', 'id': 55}, {'label': '2010年胡玫执导电影', 'group': 'Event', 'id': 65}, {'label': '电视剧', 'group': 'Event', 'id': 71}, {'label': '杨幂', 'group': 'Event', 'id': 78}, {'label': '中国电视剧飞天奖特别奖', 'group': 'Event', 'id': 70}, {'label': '周迅主要作品', 'group': 'Event', 'id': 81}, {'label': '历史著作', 'group': 'Event', 'id': 68}, {'label': '井上靖', 'group': 'Event', 'id': 75}, {'label': '创始人', 'group': 'Event', 'id': 31}, {'label': '国产励志动画片', 'group': 'Event', 'id': 72}, {'label': '儒家学派创始人', 'group': 'Event', 'id': 82}, {'label': '文学作品', 'group': 'Event', 'id': 77}, {'label': '出版物', 'group': 'Event', 'id': 45}, {'label': '小说作品', 'group': 'Event', 'id': 37}, {'label': '电影', 'group': 'Event', 'id': 7}, {'label': '著作', 'group': 'Event', 'id': 69}, {'label': '思想家', 'group': 'Event', 'id': 47}, {'label': '姬仲鸣著作', 'group': 'Event', 'id': 76}, {'label': '动画片', 'group': 'Event', 'id': 9}, {'label': '孔子', 'group': 'Event', 'id': 73}, {'label': '李小璐主要作品', 'group': 'Event', 'id': 19}, {'label': '人物', 'group': 'Event', 'id': 83}, {'label': '小说', 'group': 'Event', 'id': 66}, {'label': '文学', 'group': 'Event', 'id': 17}, {'label': '1990年电视剧', 'group': 'Event', 'id': 80}, {'label': '艺术书籍', 'group': 'Event', 'id': 57}, {'label': '井上靖所著长篇小说', 'group': 'Event', 'id': 79}, {'label': '书籍', 'group': 'Event', 'id': 49}];
+      var edges = [{'label': 'is-a', 'to': 49, 'from': 57}, {'label': 'is-a', 'to': 55, 'from': 59}, {'label': 'is-a', 'to': 66, 'from': 37}, {'label': 'is-a', 'to': 7, 'from': 65}, {'label': 'is-a', 'to': 9, 'from': 72}, {'label': 'is-a', 'to': 55, 'from': 68}, {'label': 'is-a', 'to': 17, 'from': 77}, {'label': 'is-a', 'to': 83, 'from': 59}, {'label': 'is-a', 'to': 17, 'from': 79}, {'label': 'is-a', 'to': 19, 'from': 80}, {'label': 'is-a', 'to': 82, 'from': 78}, {'label': 'is-a', 'to': 45, 'from': 76}, {'label': 'is-a', 'to': 68, 'from': 79}, {'label': 'is-a', 'to': 71, 'from': 80}, {'label': 'is-a', 'to': 73, 'from': 65}, {'label': 'is-a', 'to': 31, 'from': 82}, {'label': 'is-a', 'to': 49, 'from': 79}, {'label': 'is-a', 'to': 69, 'from': 76}, {'label': 'is-a', 'to': 37, 'from': 79}, {'label': 'is-a', 'to': 66, 'from': 79}, {'label': 'is-a', 'to': 55, 'from': 72}, {'label': 'is-a', 'to': 66, 'from': 78}, {'label': 'is-a', 'to': 45, 'from': 79}, {'label': 'is-a', 'to': 47, 'from': 82}, {'label': 'is-a', 'to': 49, 'from': 76}, {'label': 'is-a', 'to': 72, 'from': 78}, {'label': 'is-a', 'to': 70, 'from': 80}, {'label': 'is-a', 'to': 55, 'from': 79}, {'label': 'is-a', 'to': 57, 'from': 79}, {'label': 'is-a', 'to': 59, 'from': 82}, {'label': 'is-a', 'to': 76, 'from': 78}, {'label': 'is-a', 'to': 80, 'from': 78}, {'label': 'is-a', 'to': 65, 'from': 78}, {'label': 'is-a', 'to': 73, 'from': 66}, {'label': 'is-a', 'to': 69, 'from': 68}, {'label': 'is-a', 'to': 71, 'from': 70}, {'label': 'is-a', 'to': 73, 'from': 72}, {'label': 'is-a', 'to': 75, 'from': 79}, {'label': 'is-a', 'to': 77, 'from': 76}, {'label': 'is-a', 'to': 79, 'from': 78}, {'label': 'is-a', 'to': 81, 'from': 80}, {'label': 'is-a', 'to': 83, 'from': 82}];
+
+      var container = document.getElementById("VIS_draw");
+
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+
+      var options = {
+          nodes: {
+              shape: 'dot',
+              size: 25,
+              font: {
+                  size: 14
+              }
+          },
+          edges: {
+              font: {
+                  size: 14,
+                  align: 'left'
+              },
+              color: 'red',
+              arrows: {
+                  to: {enabled: true, scaleFactor: 0.5}
+              },
+              smooth: {enabled: true}
+          },
+          physics: {
+              enabled: true
+          }
+      };
+
+      var network = new vis.Network(container, data, options);
+
+    </script>
+    </body>
+    </html>

@@ -1,0 +1,50 @@
+
+    <html>
+    <head>
+      <script type="text/javascript" src="VIS/dist/vis.js"></script>
+      <link href="VIS/dist/vis.css" rel="stylesheet" type="text/css">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+
+    <div id="VIS_draw"></div>
+    <script type="text/javascript">
+      var nodes = [{'group': 'Event', 'id': 16, 'label': '植物'}, {'group': 'Event', 'id': 19, 'label': '哲学基本问题'}, {'group': 'Event', 'id': 44, 'label': '食物'}, {'group': 'Event', 'id': 49, 'label': '社会科学'}, {'group': 'Event', 'id': 25, 'label': '教育学'}, {'group': 'Event', 'id': 39, 'label': '科技'}, {'group': 'Event', 'id': 65, 'label': 'root'}, {'group': 'Event', 'id': 64, 'label': '自然'}, {'group': 'Event', 'id': 35, 'label': '农作物'}, {'group': 'Event', 'id': 45, 'label': '饮食'}, {'group': 'Event', 'id': 56, 'label': '知识'}, {'group': 'Event', 'id': 40, 'label': '农学'}, {'group': 'Event', 'id': 54, 'label': '食品原料'}, {'group': 'Event', 'id': 57, 'label': '知识论'}, {'group': 'Event', 'id': 47, 'label': '经济理论'}, {'group': 'Event', 'id': 62, 'label': '学习'}, {'group': 'Event', 'id': 67, 'label': '产业经济'}, {'group': 'Event', 'id': 48, 'label': '经济学'}, {'group': 'Event', 'id': 42, 'label': '生物'}, {'group': 'Event', 'id': 60, 'label': '自然科学'}, {'group': 'Event', 'id': 58, 'label': '学科'}, {'group': 'Event', 'id': 31, 'label': '微观经济学'}, {'group': 'Event', 'id': 7, 'label': '家政学'}, {'group': 'Event', 'id': 34, 'label': '小麦'}, {'group': 'Event', 'id': 15, 'label': '生活'}, {'group': 'Event', 'id': 55, 'label': '食品'}, {'group': 'Event', 'id': 59, 'label': '学术'}, {'group': 'Event', 'id': 13, 'label': '行为'}, {'group': 'Event', 'id': 61, 'label': '科学'}, {'group': 'Event', 'id': 66, 'label': '农业'}, {'group': 'Event', 'id': 63, 'label': '教育'}, {'group': 'Event', 'id': 41, 'label': '生命科学'}];
+      var edges = [{'from': 41, 'label': 'is-a', 'to': 60}, {'from': 55, 'label': 'is-a', 'to': 44}, {'from': 35, 'label': 'is-a', 'to': 16}, {'from': 45, 'label': 'is-a', 'to': 7}, {'from': 35, 'label': 'is-a', 'to': 54}, {'from': 16, 'label': 'is-a', 'to': 64}, {'from': 62, 'label': 'is-a', 'to': 13}, {'from': 45, 'label': 'is-a', 'to': 15}, {'from': 16, 'label': 'is-a', 'to': 42}, {'from': 57, 'label': 'is-a', 'to': 19}, {'from': 31, 'label': 'is-a', 'to': 48}, {'from': 35, 'label': 'is-a', 'to': 66}, {'from': 62, 'label': 'is-a', 'to': 25}, {'from': 58, 'label': 'is-a', 'to': 56}, {'from': 35, 'label': 'is-a', 'to': 40}, {'from': 67, 'label': 'is-a', 'to': 31}, {'from': 61, 'label': 'is-a', 'to': 65}, {'from': 34, 'label': 'is-a', 'to': 35}, {'from': 39, 'label': 'is-a', 'to': 56}, {'from': 66, 'label': 'is-a', 'to': 39}, {'from': 40, 'label': 'is-a', 'to': 41}, {'from': 42, 'label': 'is-a', 'to': 64}, {'from': 44, 'label': 'is-a', 'to': 45}, {'from': 48, 'label': 'is-a', 'to': 47}, {'from': 48, 'label': 'is-a', 'to': 49}, {'from': 56, 'label': 'is-a', 'to': 62}, {'from': 60, 'label': 'is-a', 'to': 58}, {'from': 54, 'label': 'is-a', 'to': 55}, {'from': 56, 'label': 'is-a', 'to': 57}, {'from': 58, 'label': 'is-a', 'to': 59}, {'from': 60, 'label': 'is-a', 'to': 61}, {'from': 62, 'label': 'is-a', 'to': 63}, {'from': 64, 'label': 'is-a', 'to': 65}, {'from': 66, 'label': 'is-a', 'to': 67}];
+
+      var container = document.getElementById("VIS_draw");
+
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+
+      var options = {
+          nodes: {
+              shape: 'dot',
+              size: 25,
+              font: {
+                  size: 14
+              }
+          },
+          edges: {
+              font: {
+                  size: 14,
+                  align: 'left'
+              },
+              color: 'red',
+              arrows: {
+                  to: {enabled: true, scaleFactor: 0.5}
+              },
+              smooth: {enabled: true}
+          },
+          physics: {
+              enabled: true
+          }
+      };
+
+      var network = new vis.Network(container, data, options);
+
+    </script>
+    </body>
+    </html>

@@ -1,0 +1,50 @@
+
+    <html>
+    <head>
+      <script type="text/javascript" src="VIS/dist/vis.js"></script>
+      <link href="VIS/dist/vis.css" rel="stylesheet" type="text/css">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+
+    <div id="VIS_draw"></div>
+    <script type="text/javascript">
+      var nodes = [{'label': '篮球', 'id': 69, 'group': 'Event'}, {'label': '政府官员', 'id': 13, 'group': 'Event'}, {'label': '磐石市政府办公室副主任', 'id': 38, 'group': 'Event'}, {'label': '体育人物', 'id': 63, 'group': 'Event'}, {'label': '中国篮球协会主席、中职联公司董事长', 'id': 62, 'group': 'Event'}, {'label': '娱乐人物', 'id': 75, 'group': 'Event'}, {'label': '董事长', 'id': 33, 'group': 'Event'}, {'label': '陕西省城固县盐务局副局长', 'id': 84, 'group': 'Event'}, {'label': '学', 'id': 29, 'group': 'Event'}, {'label': '大陆音乐人', 'id': 79, 'group': 'Event'}, {'label': '安庆市法院副调研员', 'id': 81, 'group': 'Event'}, {'label': '人物', 'id': 71, 'group': 'Event'}, {'label': '营口市人大常委会副主任', 'id': 82, 'group': 'Event'}, {'label': '调研员', 'id': 67, 'group': 'Event'}, {'label': '政治人物', 'id': 83, 'group': 'Event'}, {'label': '篮球运动员', 'id': 68, 'group': 'Event'}, {'label': '绍兴市质监局党委委员、副局长', 'id': 59, 'group': 'Event'}, {'label': '遂宁市教育和体育局总督学', 'id': 77, 'group': 'Event'}, {'label': '姚明', 'id': 85, 'group': 'Event'}, {'label': '中国著名作曲家', 'id': 78, 'group': 'Event'}, {'label': '作曲家', 'id': 27, 'group': 'Event'}, {'label': '人大常委会', 'id': 45, 'group': 'Event'}, {'label': '行业人物', 'id': 43, 'group': 'Event'}, {'label': '副局长', 'id': 41, 'group': 'Event'}, {'label': '运动员', 'id': 57, 'group': 'Event'}, {'label': '音乐人物', 'id': 21, 'group': 'Event'}, {'label': '办公室', 'id': 23, 'group': 'Event'}, {'label': '姚明集团董事长', 'id': 65, 'group': 'Event'}, {'label': '话题人物', 'id': 73, 'group': 'Event'}];
+      var edges = [{'label': 'is-a', 'to': 71, 'from': 75}, {'label': 'is-a', 'to': 71, 'from': 21}, {'label': 'is-a', 'to': 71, 'from': 73}, {'label': 'is-a', 'to': 71, 'from': 43}, {'label': 'is-a', 'to': 71, 'from': 63}, {'label': 'is-a', 'to': 71, 'from': 83}, {'label': 'is-a', 'to': 13, 'from': 77}, {'label': 'is-a', 'to': 69, 'from': 62}, {'label': 'is-a', 'to': 38, 'from': 85}, {'label': 'is-a', 'to': 71, 'from': 78}, {'label': 'is-a', 'to': 21, 'from': 78}, {'label': 'is-a', 'to': 23, 'from': 38}, {'label': 'is-a', 'to': 33, 'from': 65}, {'label': 'is-a', 'to': 27, 'from': 78}, {'label': 'is-a', 'to': 29, 'from': 77}, {'label': 'is-a', 'to': 62, 'from': 85}, {'label': 'is-a', 'to': 33, 'from': 62}, {'label': 'is-a', 'to': 78, 'from': 85}, {'label': 'is-a', 'to': 41, 'from': 84}, {'label': 'is-a', 'to': 71, 'from': 38}, {'label': 'is-a', 'to': 41, 'from': 59}, {'label': 'is-a', 'to': 43, 'from': 65}, {'label': 'is-a', 'to': 45, 'from': 82}, {'label': 'is-a', 'to': 68, 'from': 62}, {'label': 'is-a', 'to': 71, 'from': 84}, {'label': 'is-a', 'to': 57, 'from': 68}, {'label': 'is-a', 'to': 84, 'from': 85}, {'label': 'is-a', 'to': 82, 'from': 85}, {'label': 'is-a', 'to': 57, 'from': 62}, {'label': 'is-a', 'to': 59, 'from': 85}, {'label': 'is-a', 'to': 71, 'from': 65}, {'label': 'is-a', 'to': 63, 'from': 62}, {'label': 'is-a', 'to': 65, 'from': 85}, {'label': 'is-a', 'to': 67, 'from': 81}, {'label': 'is-a', 'to': 69, 'from': 68}, {'label': 'is-a', 'to': 71, 'from': 82}, {'label': 'is-a', 'to': 73, 'from': 84}, {'label': 'is-a', 'to': 75, 'from': 78}, {'label': 'is-a', 'to': 77, 'from': 85}, {'label': 'is-a', 'to': 79, 'from': 78}, {'label': 'is-a', 'to': 81, 'from': 85}, {'label': 'is-a', 'to': 83, 'from': 82}, {'label': 'is-a', 'to': 85, 'from': 84}];
+
+      var container = document.getElementById("VIS_draw");
+
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+
+      var options = {
+          nodes: {
+              shape: 'dot',
+              size: 25,
+              font: {
+                  size: 14
+              }
+          },
+          edges: {
+              font: {
+                  size: 14,
+                  align: 'left'
+              },
+              color: 'red',
+              arrows: {
+                  to: {enabled: true, scaleFactor: 0.5}
+              },
+              smooth: {enabled: true}
+          },
+          physics: {
+              enabled: true
+          }
+      };
+
+      var network = new vis.Network(container, data, options);
+
+    </script>
+    </body>
+    </html>

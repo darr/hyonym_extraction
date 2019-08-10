@@ -1,0 +1,50 @@
+
+    <html>
+    <head>
+      <script type="text/javascript" src="VIS/dist/vis.js"></script>
+      <link href="VIS/dist/vis.css" rel="stylesheet" type="text/css">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+
+    <div id="VIS_draw"></div>
+    <script type="text/javascript">
+      var nodes = [{'group': 'Event', 'id': 8, 'label': '计算机科学基础理论'}, {'group': 'Event', 'id': 136, 'label': '植物'}, {'group': 'Event', 'id': 132, 'label': '电子商务'}, {'group': 'Event', 'id': 148, 'label': '科技'}, {'group': 'Event', 'id': 86, 'label': '工业'}, {'group': 'Event', 'id': 89, 'label': '自然'}, {'group': 'Event', 'id': 126, 'label': '饮食'}, {'group': 'Event', 'id': 102, 'label': '制造'}, {'group': 'Event', 'id': 154, 'label': '经济'}, {'group': 'Event', 'id': 109, 'label': '营养'}, {'group': 'Event', 'id': 79, 'label': '工程技术'}, {'group': 'Event', 'id': 113, 'label': '技术类型'}, {'group': 'Event', 'id': 144, 'label': '养生'}, {'group': 'Event', 'id': 111, 'label': '膳食营养'}, {'group': 'Event', 'id': 153, 'label': '食品农业'}, {'group': 'Event', 'id': 41, 'label': '社会科学'}, {'group': 'Event', 'id': 152, 'label': '水果'}, {'group': 'Event', 'id': 48, 'label': '公司'}, {'group': 'Event', 'id': 119, 'label': '自然科学'}, {'group': 'Event', 'id': 157, 'label': '农业'}, {'group': 'Event', 'id': 125, 'label': '制造品'}, {'group': 'Event', 'id': 156, 'label': '农产品'}, {'group': 'Event', 'id': 46, 'label': '家政学'}, {'group': 'Event', 'id': 139, 'label': '服务业'}, {'group': 'Event', 'id': 123, 'label': '学科'}, {'group': 'Event', 'id': 101, 'label': '电脑'}, {'group': 'Event', 'id': 147, 'label': '食物'}, {'group': 'Event', 'id': 150, 'label': '金融'}, {'group': 'Event', 'id': 96, 'label': '企业'}, {'group': 'Event', 'id': 143, 'label': '电脑硬件公司'}, {'group': 'Event', 'id': 141, 'label': '植物性食物'}, {'group': 'Event', 'id': 105, 'label': '知识论'}, {'group': 'Event', 'id': 57, 'label': '数字逻辑'}, {'group': 'Event', 'id': 44, 'label': '电脑公司'}, {'group': 'Event', 'id': 131, 'label': '电脑硬件'}, {'group': 'Event', 'id': 75, 'label': '各类型植物'}, {'group': 'Event', 'id': 134, 'label': '电脑工业'}, {'group': 'Event', 'id': 145, 'label': '健康'}, {'group': 'Event', 'id': 135, 'label': '信息产业'}, {'group': 'Event', 'id': 90, 'label': '市场'}, {'group': 'Event', 'id': 129, 'label': '计算机技术'}, {'group': 'Event', 'id': 80, 'label': '可以食用的植物'}, {'group': 'Event', 'id': 103, 'label': '机械工程'}, {'group': 'Event', 'id': 142, 'label': '苹果'}, {'group': 'Event', 'id': 59, 'label': '技术'}, {'group': 'Event', 'id': 51, 'label': '学习'}, {'group': 'Event', 'id': 87, 'label': '产业经济'}, {'group': 'Event', 'id': 155, 'label': 'root'}, {'group': 'Event', 'id': 122, 'label': '计算机科学'}, {'group': 'Event', 'id': 149, 'label': '知识'}, {'group': 'Event', 'id': 138, 'label': '商业'}, {'group': 'Event', 'id': 98, 'label': '微观经济学'}, {'group': 'Event', 'id': 146, 'label': '食品'}, {'group': 'Event', 'id': 127, 'label': '生活'}, {'group': 'Event', 'id': 47, 'label': '其他社会科学'}, {'group': 'Event', 'id': 128, 'label': '计算机'}, {'group': 'Event', 'id': 137, 'label': '生物'}, {'group': 'Event', 'id': 13, 'label': '应用科学'}, {'group': 'Event', 'id': 99, 'label': '经济学'}];
+      var edges = [{'from': 57, 'label': 'is-a', 'to': 8}, {'from': 90, 'label': 'is-a', 'to': 96}, {'from': 102, 'label': 'is-a', 'to': 86}, {'from': 147, 'label': 'is-a', 'to': 126}, {'from': 8, 'label': 'is-a', 'to': 122}, {'from': 126, 'label': 'is-a', 'to': 46}, {'from': 122, 'label': 'is-a', 'to': 13}, {'from': 109, 'label': 'is-a', 'to': 144}, {'from': 101, 'label': 'is-a', 'to': 128}, {'from': 153, 'label': 'is-a', 'to': 157}, {'from': 109, 'label': 'is-a', 'to': 126}, {'from': 87, 'label': 'is-a', 'to': 98}, {'from': 80, 'label': 'is-a', 'to': 157}, {'from': 134, 'label': 'is-a', 'to': 101}, {'from': 109, 'label': 'is-a', 'to': 145}, {'from': 44, 'label': 'is-a', 'to': 48}, {'from': 143, 'label': 'is-a', 'to': 44}, {'from': 153, 'label': 'is-a', 'to': 126}, {'from': 152, 'label': 'is-a', 'to': 80}, {'from': 145, 'label': 'is-a', 'to': 127}, {'from': 47, 'label': 'is-a', 'to': 41}, {'from': 137, 'label': 'is-a', 'to': 89}, {'from': 44, 'label': 'is-a', 'to': 134}, {'from': 46, 'label': 'is-a', 'to': 47}, {'from': 48, 'label': 'is-a', 'to': 96}, {'from': 149, 'label': 'is-a', 'to': 51}, {'from': 75, 'label': 'is-a', 'to': 136}, {'from': 139, 'label': 'is-a', 'to': 87}, {'from': 131, 'label': 'is-a', 'to': 57}, {'from': 129, 'label': 'is-a', 'to': 59}, {'from': 125, 'label': 'is-a', 'to': 90}, {'from': 132, 'label': 'is-a', 'to': 87}, {'from': 135, 'label': 'is-a', 'to': 139}, {'from': 89, 'label': 'is-a', 'to': 155}, {'from': 134, 'label': 'is-a', 'to': 86}, {'from': 157, 'label': 'is-a', 'to': 87}, {'from': 122, 'label': 'is-a', 'to': 101}, {'from': 80, 'label': 'is-a', 'to': 75}, {'from': 142, 'label': 'is-a', 'to': 152}, {'from': 103, 'label': 'is-a', 'to': 79}, {'from': 80, 'label': 'is-a', 'to': 146}, {'from': 153, 'label': 'is-a', 'to': 146}, {'from': 153, 'label': 'is-a', 'to': 132}, {'from': 86, 'label': 'is-a', 'to': 87}, {'from': 136, 'label': 'is-a', 'to': 89}, {'from': 90, 'label': 'is-a', 'to': 139}, {'from': 153, 'label': 'is-a', 'to': 156}, {'from': 125, 'label': 'is-a', 'to': 102}, {'from': 96, 'label': 'is-a', 'to': 154}, {'from': 98, 'label': 'is-a', 'to': 99}, {'from': 131, 'label': 'is-a', 'to': 101}, {'from': 102, 'label': 'is-a', 'to': 103}, {'from': 149, 'label': 'is-a', 'to': 105}, {'from': 129, 'label': 'is-a', 'to': 148}, {'from': 111, 'label': 'is-a', 'to': 109}, {'from': 141, 'label': 'is-a', 'to': 111}, {'from': 129, 'label': 'is-a', 'to': 113}, {'from': 157, 'label': 'is-a', 'to': 148}, {'from': 132, 'label': 'is-a', 'to': 138}, {'from': 122, 'label': 'is-a', 'to': 119}, {'from': 127, 'label': 'is-a', 'to': 155}, {'from': 122, 'label': 'is-a', 'to': 123}, {'from': 131, 'label': 'is-a', 'to': 125}, {'from': 126, 'label': 'is-a', 'to': 127}, {'from': 128, 'label': 'is-a', 'to': 129}, {'from': 143, 'label': 'is-a', 'to': 131}, {'from': 132, 'label': 'is-a', 'to': 150}, {'from': 134, 'label': 'is-a', 'to': 135}, {'from': 136, 'label': 'is-a', 'to': 137}, {'from': 138, 'label': 'is-a', 'to': 139}, {'from': 152, 'label': 'is-a', 'to': 141}, {'from': 142, 'label': 'is-a', 'to': 143}, {'from': 144, 'label': 'is-a', 'to': 145}, {'from': 146, 'label': 'is-a', 'to': 147}, {'from': 148, 'label': 'is-a', 'to': 149}, {'from': 150, 'label': 'is-a', 'to': 154}, {'from': 152, 'label': 'is-a', 'to': 153}, {'from': 154, 'label': 'is-a', 'to': 155}, {'from': 156, 'label': 'is-a', 'to': 157}];
+
+      var container = document.getElementById("VIS_draw");
+
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+
+      var options = {
+          nodes: {
+              shape: 'dot',
+              size: 25,
+              font: {
+                  size: 14
+              }
+          },
+          edges: {
+              font: {
+                  size: 14,
+                  align: 'left'
+              },
+              color: 'red',
+              arrows: {
+                  to: {enabled: true, scaleFactor: 0.5}
+              },
+              smooth: {enabled: true}
+          },
+          physics: {
+              enabled: true
+          }
+      };
+
+      var network = new vis.Network(container, data, options);
+
+    </script>
+    </body>
+    </html>

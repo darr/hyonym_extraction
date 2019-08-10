@@ -1,0 +1,50 @@
+
+    <html>
+    <head>
+      <script type="text/javascript" src="VIS/dist/vis.js"></script>
+      <link href="VIS/dist/vis.css" rel="stylesheet" type="text/css">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+
+    <div id="VIS_draw"></div>
+    <script type="text/javascript">
+      var nodes = [{'group': 'Event', 'id': 39, 'label': '娱乐'}, {'group': 'Event', 'id': 65, 'label': '东亚'}, {'group': 'Event', 'id': 67, 'label': '大洲'}, {'group': 'Event', 'id': 59, 'label': '国家'}, {'group': 'Event', 'id': 26, 'label': '亚洲地理'}, {'group': 'Event', 'id': 36, 'label': '文化'}, {'group': 'Event', 'id': 31, 'label': '地理'}, {'group': 'Event', 'id': 71, 'label': '日本'}, {'group': 'Event', 'id': 58, 'label': '亚洲国家'}, {'group': 'Event', 'id': 66, 'label': '亚洲'}, {'group': 'Event', 'id': 20, 'label': '东亚文化'}, {'group': 'Event', 'id': 28, 'label': '亚洲文化'}, {'group': 'Event', 'id': 72, 'label': '日本漫画'}, {'group': 'Event', 'id': 63, 'label': '各国漫画'}, {'group': 'Event', 'id': 64, 'label': '东亚文化圈'}, {'group': 'Event', 'id': 50, 'label': '哆啦A梦'}, {'group': 'Event', 'id': 7, 'label': '生活'}, {'group': 'Event', 'id': 53, 'label': 'root'}, {'group': 'Event', 'id': 61, 'label': '漫画'}, {'group': 'Event', 'id': 73, 'label': '日本文化'}, {'group': 'Event', 'id': 41, 'label': '依国家来作的分类'}, {'group': 'Event', 'id': 57, 'label': '政治'}, {'group': 'Event', 'id': 1, 'label': '各大洲地理'}, {'group': 'Event', 'id': 46, 'label': '动漫'}, {'group': 'Event', 'id': 29, 'label': '区域文化'}, {'group': 'Event', 'id': 49, 'label': '各国文化'}, {'group': 'Event', 'id': 68, 'label': '日本媒体'}, {'group': 'Event', 'id': 52, 'label': 'HOT'}, {'group': 'Event', 'id': 55, 'label': '各国媒体'}];
+      var edges = [{'from': 26, 'label': 'is-a', 'to': 1}, {'from': 55, 'label': 'is-a', 'to': 41}, {'from': 20, 'label': 'is-a', 'to': 65}, {'from': 39, 'label': 'is-a', 'to': 7}, {'from': 73, 'label': 'is-a', 'to': 64}, {'from': 72, 'label': 'is-a', 'to': 68}, {'from': 29, 'label': 'is-a', 'to': 36}, {'from': 41, 'label': 'is-a', 'to': 59}, {'from': 61, 'label': 'is-a', 'to': 36}, {'from': 64, 'label': 'is-a', 'to': 20}, {'from': 20, 'label': 'is-a', 'to': 28}, {'from': 49, 'label': 'is-a', 'to': 29}, {'from': 65, 'label': 'is-a', 'to': 26}, {'from': 26, 'label': 'is-a', 'to': 66}, {'from': 28, 'label': 'is-a', 'to': 29}, {'from': 59, 'label': 'is-a', 'to': 31}, {'from': 61, 'label': 'is-a', 'to': 46}, {'from': 39, 'label': 'is-a', 'to': 52}, {'from': 36, 'label': 'is-a', 'to': 53}, {'from': 46, 'label': 'is-a', 'to': 39}, {'from': 49, 'label': 'is-a', 'to': 41}, {'from': 58, 'label': 'is-a', 'to': 66}, {'from': 71, 'label': 'is-a', 'to': 58}, {'from': 46, 'label': 'is-a', 'to': 52}, {'from': 73, 'label': 'is-a', 'to': 49}, {'from': 50, 'label': 'is-a', 'to': 72}, {'from': 52, 'label': 'is-a', 'to': 53}, {'from': 68, 'label': 'is-a', 'to': 55}, {'from': 59, 'label': 'is-a', 'to': 57}, {'from': 58, 'label': 'is-a', 'to': 59}, {'from': 63, 'label': 'is-a', 'to': 61}, {'from': 72, 'label': 'is-a', 'to': 63}, {'from': 64, 'label': 'is-a', 'to': 65}, {'from': 66, 'label': 'is-a', 'to': 67}, {'from': 68, 'label': 'is-a', 'to': 71}, {'from': 73, 'label': 'is-a', 'to': 71}, {'from': 72, 'label': 'is-a', 'to': 73}];
+
+      var container = document.getElementById("VIS_draw");
+
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+
+      var options = {
+          nodes: {
+              shape: 'dot',
+              size: 25,
+              font: {
+                  size: 14
+              }
+          },
+          edges: {
+              font: {
+                  size: 14,
+                  align: 'left'
+              },
+              color: 'red',
+              arrows: {
+                  to: {enabled: true, scaleFactor: 0.5}
+              },
+              smooth: {enabled: true}
+          },
+          physics: {
+              enabled: true
+          }
+      };
+
+      var network = new vis.Network(container, data, options);
+
+    </script>
+    </body>
+    </html>

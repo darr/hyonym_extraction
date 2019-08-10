@@ -1,0 +1,50 @@
+
+    <html>
+    <head>
+      <script type="text/javascript" src="VIS/dist/vis.js"></script>
+      <link href="VIS/dist/vis.css" rel="stylesheet" type="text/css">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+
+    <div id="VIS_draw"></div>
+    <script type="text/javascript">
+      var nodes = [{'group': 'Event', 'label': '纪录片', 'id': 151}, {'group': 'Event', 'label': '周迅主要作品', 'id': 57}, {'group': 'Event', 'label': '姬仲鸣著作', 'id': 148}, {'group': 'Event', 'label': '中英合拍纪录片', 'id': 150}, {'group': 'Event', 'label': '国产励志动画片', 'id': 170}, {'group': 'Event', 'label': '小说作品', 'id': 115}, {'group': 'Event', 'label': '中国电视剧飞天奖特别奖', 'id': 47}, {'group': 'Event', 'label': '2011版孔子舞剧', 'id': 131}, {'group': 'Event', 'label': '非娱乐作品', 'id': 169}, {'group': 'Event', 'label': '小说', 'id': 178}, {'group': 'Event', 'label': '电影', 'id': 99}, {'group': 'Event', 'label': '中国歌剧舞剧院2013舞剧版《孔子》', 'id': 160}, {'group': 'Event', 'label': '舞剧', 'id': 61}, {'group': 'Event', 'label': '古代史', 'id': 171}, {'group': 'Event', 'label': '儒家学派创始人', 'id': 177}, {'group': 'Event', 'label': '2010年胡玫执导电影', 'id': 144}, {'group': 'Event', 'label': '电视剧', 'id': 123}, {'group': 'Event', 'label': '思想家', 'id': 127}, {'group': 'Event', 'label': '历史著作', 'id': 128}, {'group': 'Event', 'label': '2011年纪录片', 'id': 168}, {'group': 'Event', 'label': '李小璐主要作品', 'id': 147}, {'group': 'Event', 'label': '历史人物', 'id': 109}, {'group': 'Event', 'label': '动画片', 'id': 22}, {'group': 'Event', 'label': '人物', 'id': 161}, {'group': 'Event', 'label': '历史', 'id': 163}, {'group': 'Event', 'label': '书画作品', 'id': 73}, {'group': 'Event', 'label': '中国文学', 'id': 33}, {'group': 'Event', 'label': '艺术书籍', 'id': 117}, {'group': 'Event', 'label': '著作', 'id': 129}, {'group': 'Event', 'label': '歌曲', 'id': 173}, {'group': 'Event', 'label': '出版物', 'id': 179}, {'group': 'Event', 'label': '孔子', 'id': 176}, {'group': 'Event', 'label': '文学', 'id': 97}, {'group': 'Event', 'label': '动画', 'id': 49}, {'group': 'Event', 'label': '电视剧作品', 'id': 165}, {'group': 'Event', 'label': '吴礼权著历史小说：镜花水月·游士孔子', 'id': 139}, {'group': 'Event', 'label': '动画作品', 'id': 105}, {'group': 'Event', 'label': '田七导演歌曲', 'id': 172}, {'group': 'Event', 'label': '1990年电视剧', 'id': 164}, {'group': 'Event', 'label': '创始人', 'id': 85}, {'group': 'Event', 'label': '娱乐作品', 'id': 157}, {'group': 'Event', 'label': '井上靖', 'id': 175}, {'group': 'Event', 'label': '出品', 'id': 119}, {'group': 'Event', 'label': '2011版《孔子》舞剧', 'id': 86}, {'group': 'Event', 'label': '娱乐', 'id': 125}, {'group': 'Event', 'label': '中国歌剧舞剧院2013舞剧版孔子', 'id': 155}, {'group': 'Event', 'label': '井上靖所著长篇小说', 'id': 174}, {'group': 'Event', 'label': '文学作品', 'id': 149}, {'group': 'Event', 'label': '书籍', 'id': 67}, {'group': 'Event', 'label': '2010年大陆电视剧，佛山传媒出品', 'id': 132}, {'group': 'Event', 'label': '戏剧', 'id': 87}];
+      var edges = [{'to': 123, 'from': 165, 'label': 'is-a'}, {'to': 178, 'from': 115, 'label': 'is-a'}, {'to': 97, 'from': 149, 'label': 'is-a'}, {'to': 125, 'from': 157, 'label': 'is-a'}, {'to': 157, 'from': 169, 'label': 'is-a'}, {'to': 123, 'from': 47, 'label': 'is-a'}, {'to': 67, 'from': 117, 'label': 'is-a'}, {'to': 163, 'from': 128, 'label': 'is-a'}, {'to': 22, 'from': 170, 'label': 'is-a'}, {'to': 123, 'from': 164, 'label': 'is-a'}, {'to': 163, 'from': 109, 'label': 'is-a'}, {'to': 49, 'from': 22, 'label': 'is-a'}, {'to': 161, 'from': 109, 'label': 'is-a'}, {'to': 99, 'from': 144, 'label': 'is-a'}, {'to': 97, 'from': 33, 'label': 'is-a'}, {'to': 176, 'from': 155, 'label': 'is-a'}, {'to': 33, 'from': 178, 'label': 'is-a'}, {'to': 178, 'from': 176, 'label': 'is-a'}, {'to': 67, 'from': 178, 'label': 'is-a'}, {'to': 179, 'from': 148, 'label': 'is-a'}, {'to': 49, 'from': 105, 'label': 'is-a'}, {'to': 148, 'from': 176, 'label': 'is-a'}, {'to': 61, 'from': 86, 'label': 'is-a'}, {'to': 47, 'from': 164, 'label': 'is-a'}, {'to': 49, 'from': 170, 'label': 'is-a'}, {'to': 67, 'from': 174, 'label': 'is-a'}, {'to': 157, 'from': 170, 'label': 'is-a'}, {'to': 144, 'from': 176, 'label': 'is-a'}, {'to': 57, 'from': 164, 'label': 'is-a'}, {'to': 150, 'from': 176, 'label': 'is-a'}, {'to': 61, 'from': 131, 'label': 'is-a'}, {'to': 161, 'from': 177, 'label': 'is-a'}, {'to': 168, 'from': 176, 'label': 'is-a'}, {'to': 67, 'from': 148, 'label': 'is-a'}, {'to': 164, 'from': 176, 'label': 'is-a'}, {'to': 86, 'from': 176, 'label': 'is-a'}, {'to': 73, 'from': 176, 'label': 'is-a'}, {'to': 178, 'from': 174, 'label': 'is-a'}, {'to': 157, 'from': 178, 'label': 'is-a'}, {'to': 160, 'from': 176, 'label': 'is-a'}, {'to': 115, 'from': 178, 'label': 'is-a'}, {'to': 125, 'from': 150, 'label': 'is-a'}, {'to': 85, 'from': 177, 'label': 'is-a'}, {'to': 87, 'from': 86, 'label': 'is-a'}, {'to': 172, 'from': 176, 'label': 'is-a'}, {'to': 165, 'from': 168, 'label': 'is-a'}, {'to': 129, 'from': 148, 'label': 'is-a'}, {'to': 97, 'from': 174, 'label': 'is-a'}, {'to': 97, 'from': 139, 'label': 'is-a'}, {'to': 99, 'from': 168, 'label': 'is-a'}, {'to': 176, 'from': 139, 'label': 'is-a'}, {'to': 151, 'from': 168, 'label': 'is-a'}, {'to': 105, 'from': 170, 'label': 'is-a'}, {'to': 176, 'from': 178, 'label': 'is-a'}, {'to': 109, 'from': 177, 'label': 'is-a'}, {'to': 157, 'from': 168, 'label': 'is-a'}, {'to': 132, 'from': 176, 'label': 'is-a'}, {'to': 115, 'from': 174, 'label': 'is-a'}, {'to': 117, 'from': 174, 'label': 'is-a'}, {'to': 119, 'from': 132, 'label': 'is-a'}, {'to': 128, 'from': 174, 'label': 'is-a'}, {'to': 123, 'from': 132, 'label': 'is-a'}, {'to': 125, 'from': 169, 'label': 'is-a'}, {'to': 127, 'from': 177, 'label': 'is-a'}, {'to': 129, 'from': 128, 'label': 'is-a'}, {'to': 131, 'from': 176, 'label': 'is-a'}, {'to': 165, 'from': 132, 'label': 'is-a'}, {'to': 149, 'from': 178, 'label': 'is-a'}, {'to': 176, 'from': 170, 'label': 'is-a'}, {'to': 139, 'from': 176, 'label': 'is-a'}, {'to': 174, 'from': 176, 'label': 'is-a'}, {'to': 163, 'from': 174, 'label': 'is-a'}, {'to': 176, 'from': 144, 'label': 'is-a'}, {'to': 147, 'from': 164, 'label': 'is-a'}, {'to': 149, 'from': 148, 'label': 'is-a'}, {'to': 151, 'from': 150, 'label': 'is-a'}, {'to': 179, 'from': 174, 'label': 'is-a'}, {'to': 155, 'from': 176, 'label': 'is-a'}, {'to': 157, 'from': 164, 'label': 'is-a'}, {'to': 176, 'from': 160, 'label': 'is-a'}, {'to': 161, 'from': 160, 'label': 'is-a'}, {'to': 163, 'from': 170, 'label': 'is-a'}, {'to': 165, 'from': 164, 'label': 'is-a'}, {'to': 170, 'from': 176, 'label': 'is-a'}, {'to': 169, 'from': 168, 'label': 'is-a'}, {'to': 171, 'from': 170, 'label': 'is-a'}, {'to': 173, 'from': 172, 'label': 'is-a'}, {'to': 175, 'from': 174, 'label': 'is-a'}, {'to': 177, 'from': 176, 'label': 'is-a'}, {'to': 179, 'from': 178, 'label': 'is-a'}];
+
+      var container = document.getElementById("VIS_draw");
+
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+
+      var options = {
+          nodes: {
+              shape: 'dot',
+              size: 25,
+              font: {
+                  size: 14
+              }
+          },
+          edges: {
+              font: {
+                  size: 14,
+                  align: 'left'
+              },
+              color: 'red',
+              arrows: {
+                  to: {enabled: true, scaleFactor: 0.5}
+              },
+              smooth: {enabled: true}
+          },
+          physics: {
+              enabled: true
+          }
+      };
+
+      var network = new vis.Network(container, data, options);
+
+    </script>
+    </body>
+    </html>

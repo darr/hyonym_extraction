@@ -1,0 +1,50 @@
+
+    <html>
+    <head>
+      <script type="text/javascript" src="VIS/dist/vis.js"></script>
+      <link href="VIS/dist/vis.css" rel="stylesheet" type="text/css">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+
+    <div id="VIS_draw"></div>
+    <script type="text/javascript">
+      var nodes = [{'group': 'Event', 'label': '电话', 'id': 46}, {'group': 'Event', 'label': '音乐', 'id': 19}, {'group': 'Event', 'label': 'gaga', 'id': 45}, {'group': 'Event', 'label': 'Lady', 'id': 51}, {'group': 'Event', 'label': '中国通信学会', 'id': 15}, {'group': 'Event', 'label': 'LADY', 'id': 27}, {'group': 'Event', 'label': 'Lady GaGa & Beyonce演唱歌曲', 'id': 50}, {'group': 'Event', 'label': '单曲', 'id': 23}, {'group': 'Event', 'label': 'GaGa', 'id': 43}, {'group': 'Event', 'label': '摇滚音乐', 'id': 25}, {'group': 'Event', 'label': '话音', 'id': 37}, {'group': 'Event', 'label': '歌曲', 'id': 21}, {'group': 'Event', 'label': '娱乐作品', 'id': 49}, {'group': 'Event', 'label': '流行音乐', 'id': 31}, {'group': 'Event', 'label': '徐小凤演唱歌曲', 'id': 48}, {'group': 'Event', 'label': '科学百科信息科学分类', 'id': 41}, {'group': 'Event', 'label': '通过电信号双向传输话音的设备', 'id': 40}, {'group': 'Event', 'label': '音乐作品', 'id': 47}];
+      var edges = [{'label': 'is-a', 'to': 19, 'from': 47}, {'label': 'is-a', 'to': 19, 'from': 25}, {'label': 'is-a', 'to': 21, 'from': 50}, {'label': 'is-a', 'to': 19, 'from': 31}, {'label': 'is-a', 'to': 19, 'from': 46}, {'label': 'is-a', 'to': 23, 'from': 48}, {'label': 'is-a', 'to': 40, 'from': 46}, {'label': 'is-a', 'to': 15, 'from': 40}, {'label': 'is-a', 'to': 50, 'from': 46}, {'label': 'is-a', 'to': 19, 'from': 50}, {'label': 'is-a', 'to': 21, 'from': 48}, {'label': 'is-a', 'to': 23, 'from': 46}, {'label': 'is-a', 'to': 25, 'from': 46}, {'label': 'is-a', 'to': 27, 'from': 50}, {'label': 'is-a', 'to': 46, 'from': 40}, {'label': 'is-a', 'to': 31, 'from': 46}, {'label': 'is-a', 'to': 47, 'from': 48}, {'label': 'is-a', 'to': 49, 'from': 46}, {'label': 'is-a', 'to': 37, 'from': 40}, {'label': 'is-a', 'to': 48, 'from': 46}, {'label': 'is-a', 'to': 41, 'from': 40}, {'label': 'is-a', 'to': 43, 'from': 50}, {'label': 'is-a', 'to': 45, 'from': 50}, {'label': 'is-a', 'to': 47, 'from': 46}, {'label': 'is-a', 'to': 49, 'from': 48}, {'label': 'is-a', 'to': 51, 'from': 50}];
+
+      var container = document.getElementById("VIS_draw");
+
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+
+      var options = {
+          nodes: {
+              shape: 'dot',
+              size: 25,
+              font: {
+                  size: 14
+              }
+          },
+          edges: {
+              font: {
+                  size: 14,
+                  align: 'left'
+              },
+              color: 'red',
+              arrows: {
+                  to: {enabled: true, scaleFactor: 0.5}
+              },
+              smooth: {enabled: true}
+          },
+          physics: {
+              enabled: true
+          }
+      };
+
+      var network = new vis.Network(container, data, options);
+
+    </script>
+    </body>
+    </html>
